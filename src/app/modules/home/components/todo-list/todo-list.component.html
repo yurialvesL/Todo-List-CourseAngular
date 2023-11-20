@@ -1,8 +1,8 @@
-<section [ngClass]="{'loading': !hasValueTaskList()}">
+<section [ngClass]="{'loading': taskList.length <= 0}">
     <ul *ngIf="hasValueTaskList()">
         <li *ngFor="let item of taskList; let i = index">
             <input type="checkbox" [(ngModel)]="item.checked">
-            <input type="text" (keyup)="validationInput(item.task,i)"    [(ngModel)]="item.task" [ngClass]="{'checked': item.checked == true}">
+            <input type="text" (keyup)="validationInput(item.task,i)"   [(ngModel)]="item.task" [ngClass]="{'checked': item.checked == true}">
             
             <button (click)= "deleteItemTaskList(i)">
                 <img src="assets/icons/icon-trash.svg" alt="">
