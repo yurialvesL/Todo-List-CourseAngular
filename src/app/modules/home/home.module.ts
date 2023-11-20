@@ -9,6 +9,7 @@ import { TodoButtonDeleteAllComponent } from './components/todo-button-delete-al
 
 //Page
 import { HomeComponent } from './pages/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,10 +19,12 @@ import { HomeComponent } from './pages/home/home.component';
     TodoInputAddItensComponent,
     TodoListComponent,
     TodoButtonDeleteAllComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     HeaderComponent,
